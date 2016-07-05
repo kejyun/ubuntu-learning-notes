@@ -67,3 +67,4 @@ http {
 * [Enable gzip compression with nginx](http://blog.norman-chen.me/post/16)
 * [Module ngx_http_gzip_module](http://nginx.org/en/docs/http/ngx_http_gzip_module.html#gzip_types)
 * [What is the best nginx compression gzip level? - Server Fault](http://serverfault.com/questions/253074/what-is-the-best-nginx-compression-gzip-level)
+* [Finding the Nginx gzip_comp_level Sweet Spot | Mjanja Tech](https://mjanja.ch/2015/03/finding-the-nginx-gzip_comp_level-sweet-spot/)
