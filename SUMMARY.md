@@ -6,3 +6,5 @@
 * [網站](web/web-README.md)
     * [Nginx](web/nginx/web-nginx-README.md)
         * [Log](web/nginx/web-nginx-log.md)
+        * [Gzip](web/nginx/web-nginx-gzip.md)
+        * [Cache](web/nginx/web-nginx-cache.md)
