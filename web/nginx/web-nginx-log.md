@@ -44,5 +44,16 @@ if ($time_iso8601 ~ "^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})") {
 ```
 
 
+## Log 路徑
+
+設定檔：
+
+> /etc/nginx/nginx.conf
+
+```
+access_log /var/log/nginx/access.log;
+error_log /var/log/nginx/error.log;
+```
+
 ## 參考資料
 * [Log rotation directly within Nginx configuration file - Cambus.net](http://www.cambus.net/log-rotation-directly-within-nginx-configuration-file/)
