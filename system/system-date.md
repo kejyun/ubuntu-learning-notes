@@ -4,36 +4,40 @@
 
 ### 依選項選擇你在的時區
 
-```sh
+```shell
 sudo tzselect
 ```
 
 ### 更換時區檔
 
-```sh
+```shell
 sudo cp /usr/share/zoneinfo/Asia/Taipei /etc/localtime
 ```
 
 ### 對時
 
-```sh
+
+```shell
+sudo apt-get install ntpdate
 sudo ntpdate time.stdtime.gov.tw
 ```
 
 ### 時間寫入 BIOS
 
-```sh
+```shell
 sudo hwclock -w
 ```
 
+
+
 ### 每日對時
 
-```sh
+```shell
 sudo crontab -e
 ```
 *cronjob*
 
-```sh
+```shell
 0 0 * * *  /usr/sbin/ntpdate time.stdtime.gov.tw > /dev/null
 ```
 
