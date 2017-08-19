@@ -18,6 +18,14 @@ kejyun,group1
 
 ## 將使用者加入群組
 
+### 指令加入群組
+
+```shell
+sudo adduser $USER www-data
+```
+
+### 編輯群組檔案
+
 ```shell
 sudo vim /etc/group
 ```
@@ -27,6 +35,8 @@ sudo vim /etc/group
 ```shell
 www-data:x:33:kejyun,group1,group2
 ```
+
+
 
 ## 將使用者加入 sudo
 
