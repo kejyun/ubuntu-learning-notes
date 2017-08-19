@@ -13,6 +13,7 @@
         * [Log](web/nginx/web-nginx-log.md)
         * [Gzip](web/nginx/web-nginx-gzip.md)
         * [Cache](web/nginx/web-nginx-cache.md)
+    * [MySQL](web/mysql/web-mysql-README.md)
     * [PHP](web/php/web-php-README.md)
         * [安裝 PHP 7.1](web/php/web-php-php-7.1-install.md)
         * [fastcgi_pass](web/php/web-php-fastcgi-pass.md)
