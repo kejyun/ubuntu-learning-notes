@@ -3,12 +3,12 @@
 
 ## 查詢使用者群組
 
-```sh
+```shell
 groups user1
 user1 : <other-groups> www-data
 ```
 
-```sh
+```shell
 getent group www-data
 www-data:x:33:kejyun,group1
 
@@ -18,12 +18,18 @@ kejyun,group1
 
 ## 將使用者加入群組
 
-```sh
+```shell
 sudo vim /etc/group
 ```
 
 在每個群組最後面加入相關的使用者，並用逗號隔開
 
-```sh
+```shell
 www-data:x:33:kejyun,group1,group2
+```
+
+## 將使用者加入 sudo
+
+```shell
+sudo adduser 帳號名稱 sudo
 ```

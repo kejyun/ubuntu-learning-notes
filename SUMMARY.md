@@ -3,6 +3,8 @@
 * [介紹](README.md)
 * [系統](system/system-README.md)
     * [時間](system/system-date.md)
+* [權限](privilege/privilege-README.md)
+    * [群組](privilege/privilege-group.md)
 * [網路](network/network-README.md)
     * [ssh](network/network-ssh.md)
 * [網站](web/web-README.md)
