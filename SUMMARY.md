@@ -11,6 +11,7 @@
 * [網站](web/web-README.md)
     * [Nginx](web/nginx/web-nginx-README.md)
         * [Log](web/nginx/web-nginx-log.md)
+        * [認證](web/nginx/web-nginx-auth.md)
         * [Gzip](web/nginx/web-nginx-gzip.md)
         * [Cache](web/nginx/web-nginx-cache.md)
     * [MySQL](web/mysql/web-mysql-README.md)
