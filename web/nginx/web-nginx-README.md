@@ -25,3 +25,6 @@ server {
     return 301 https://$server_name$request_uri;
 }
 ```
+
+##  參考資料
+* [Redirect all HTTP requests to HTTPS with Nginx](https://bjornjohansen.no/redirect-to-https-with-nginx)
