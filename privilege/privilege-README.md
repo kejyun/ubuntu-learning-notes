@@ -9,7 +9,7 @@
 sudo passwd USERNAME
 ```
 
-***變更 Root 密碼***
+***變更目前使用者密碼***
 
 ```shell
 sudo passwd
@@ -20,3 +20,14 @@ sudo passwd
 ```shell
 passwd
 ```
+
+## 刪除使用者
+
+```shell
+sudo deluser USERNAME
+sudo deluser --remove-home USERNAME
+```
+
+
+## 參考資料
+* [How to Add and Delete Users on Ubuntu 16.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04)

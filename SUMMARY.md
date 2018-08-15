@@ -18,6 +18,7 @@
         * [認證](web/nginx/web-nginx-auth.md)
         * [Gzip](web/nginx/web-nginx-gzip.md)
         * [Cache](web/nginx/web-nginx-cache.md)
+        * [Virtual Host](web/nginx/web-nginx-virtualhost.md)
     * [MySQL](web/mysql/web-mysql-README.md)
     * [PHP](web/php/web-php-README.md)
         * [安裝 PHP 7.1](web/php/web-php-php-7.1-install.md)
