@@ -27,5 +27,25 @@ nmap localhost -p 9000
 ```
 
 
+## 日誌（Log）
+
+**1. php-fpm.conf**
+
+```
+[global]
+error_log = log/error_log
+
+[www]
+catch_workers_output = yes
+```
+
+**2. php.ini**
+
+```
+log_errors = On
+error_log = "/usr/local/php/var/log/error_log"
+error_reporting=E_ALL&~E_NOTICE
+```
+
 ## 參考資料
 * [PHP FPM - check if running - Stack Overflow](http://stackoverflow.com/questions/14915147/php-fpm-check-if-running)

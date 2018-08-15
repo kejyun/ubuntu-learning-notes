@@ -38,7 +38,7 @@ www-data:x:33:kejyun,group1,group2
 
 
 
-## 將使用者加入 sudo
+## 將使用者加入 sudo root
 
 ```shell
 sudo adduser 帳號名稱 sudo
