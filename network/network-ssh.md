@@ -71,3 +71,27 @@ service ssh restart
 ssh -p <ssh_port> -i /Users/kejyun/.ssh/id_rsa -l <account> <ip_address>
 ssh -p 22 -i /Users/kejyun/.ssh/id_rsa -l kj 127.0.0.1
 ```
+
+## SSH Log
+
+SSH Log 檔案放在 `/var/log/auth.log`
+
+```shell
+grep 'sshd' /var/log/auth.log
+
+tail -f /var/log/auth.log
+```
+
+
+## Authentication refused: bad ownership or modes for directory
+
+ssh 登入為了安全性，對於 `.ssh` 目錄的讀寫權限有限制，需要為 `775` 或 `700`
+
+`id_rsa.pub` 與 `authorized_keys` 權限為 `644`
+
+`id_rsa` 權限為 `600`
+
+
+## 參考資料
+* [ssh - How to check sshd log? - Server Fault](https://serverfault.com/questions/130482/how-to-check-sshd-log)
+* [ssh免密码登陆设置时Authentication refused: bad ownership or modes错误解决方法 - 博学无忧](https://www.bo56.com/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86%E8%AE%BE%E7%BD%AE%E6%97%B6authentication-refused-bad-ownership-or-modes%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/)
