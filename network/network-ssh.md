@@ -44,7 +44,7 @@ AuthorizedKeysFile      %h/.ssh/authorized_keys
 **在自己電腦產生 key**
 
 ```shell
-ssh-keygen
+ssh-keygen -t rsa -b 4096 -C "kj@kejyun.com"
 ```
 
 * id_rsa.pub：公開金鑰（public key），放在 Ubuntu 主機
@@ -93,5 +93,6 @@ ssh 登入為了安全性，對於 `.ssh` 目錄的讀寫權限有限制，需�
 
 
 ## 參考資料
+* [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 * [ssh - How to check sshd log? - Server Fault](https://serverfault.com/questions/130482/how-to-check-sshd-log)
 * [ssh免密码登陆设置时Authentication refused: bad ownership or modes错误解决方法 - 博学无忧](https://www.bo56.com/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86%E8%AE%BE%E7%BD%AE%E6%97%B6authentication-refused-bad-ownership-or-modes%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/)
