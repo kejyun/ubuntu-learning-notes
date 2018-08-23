@@ -118,6 +118,16 @@ f() { ssh <account>@$1 -i "<ssh_key_path>"; }; f
 f() { ssh kejyun@$1 -i "~/.ssh/id_rsa"; }; f
 ```
 
+## 在本機透過 ssh tunnel 直接連線主機
+
+```shell
+ssh -t -p <port> -l <account> <ssh_tunnel_server> bash -ic 'ssh_internal_server <ip_address>'
+```
+
+```shell
+ssh -t -p 22 -l kejyun server.kj.com bash -ic 'ssh_kj 1.1.1.1'
+```
+
 ## 參考資料
 * [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 * [ssh - How to check sshd log? - Server Fault](https://serverfault.com/questions/130482/how-to-check-sshd-log)
