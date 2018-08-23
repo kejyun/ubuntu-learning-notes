@@ -33,3 +33,5 @@
 * [日誌](log/log-README.md)
 * [編輯器](editor/editor-README.md)
     * [Vim](editor/editor-vim.md)
+* [shell](shell/shell-README.md)
+    * [函式](shell/shell-function.md)

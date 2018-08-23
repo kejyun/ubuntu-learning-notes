@@ -92,6 +92,32 @@ ssh 登入為了安全性，對於 `.ssh` 目錄的讀寫權限有限制，需�
 `id_rsa` 權限為 `600`
 
 
+## 指定 key 及帳號
+
+在做 ssh 連線 alias 指令時，想要直接接著需要連線的 IP，那麼就必須要把參數先指定好，後面才可以直接接著 IP
+
+```shell
+ssh -p <port> -i <ssh_key_path> -l <account>
+```
+
+* -p：port
+* -i：ssh 金鑰路徑
+* -l：帳號名稱
+
+```shell
+ssh -p 22 -i ~/.ssh/id_rsa -l kejyun
+```
+
+**使用 shell function 做 ssh 登入**
+
+```shell
+f() { ssh <account>@$1 -i "<ssh_key_path>"; }; f
+```
+
+```shell
+f() { ssh kejyun@$1 -i "~/.ssh/id_rsa"; }; f
+```
+
 ## 參考資料
 * [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 * [ssh - How to check sshd log? - Server Fault](https://serverfault.com/questions/130482/how-to-check-sshd-log)
