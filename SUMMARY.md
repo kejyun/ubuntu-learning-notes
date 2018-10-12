@@ -4,6 +4,7 @@
 * [系統](system/system-README.md)
     * [時間](system/system-date.md)
     * [機器名稱（hostname）](system/system-hostname.md)
+    * [虛擬記憶體（SWAP）](system/system-virtual-memory.md)
 * [軟體](software/software-README.md)
 * [權限](privilege/privilege-README.md)
     * [群組](privilege/privilege-group.md)
