@@ -18,6 +18,7 @@
     * [Nginx](web/nginx/web-nginx-README.md)
         * [Log](web/nginx/web-nginx-log.md)
         * [認證](web/nginx/web-nginx-auth.md)
+        * [憑證](web/nginx/web-nginx-cert.md)
         * [Gzip](web/nginx/web-nginx-gzip.md)
         * [Cache](web/nginx/web-nginx-cache.md)
         * [Virtual Host](web/nginx/web-nginx-virtualhost.md)
