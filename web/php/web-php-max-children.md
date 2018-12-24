@@ -33,7 +33,7 @@ pm = dynamic
 
 
 | 參數  | 說明  |
-|---|---|---|---|---|
+|---|---|
 | pm | PHP-FPM Process Manager 行程調配規則 |
 | pm.start_servers | PHP-FPM 服務在一開始啟動時，要配置多少個行程 |
 | pm.min_spare_servers | PHP-FPM 最小閒置行程的數量 |
@@ -46,7 +46,7 @@ pm = dynamic
 ```
 
 | 參數  | 說明  |
-|---|---|---|---|---|
+|---|---|
 | static | 固定行程數量（數量為 pm.max_children） ，效能很好，但很佔記憶體|
 | dynamic | 動態行程數量（根據 pm.max_children、pm.start_servers、pm.min_spare_servers、pm.max_spare_servers 動態調整），根據使用量用多少開多少，但當使用量比較低時，會保留一些行程，隨時等著接收新的連線 |
 | ondemand | 動態行程數量（根據 pm.max_children、pm.start_servers、pm.min_spare_servers、pm.max_spare_servers 動態調整），用多少開多少 |
