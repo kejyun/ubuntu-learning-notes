@@ -24,5 +24,39 @@ http {
 }
 ```
 
+## could not build server_names_hash, you should increase server_names_hash_bucket_size: 64
+
+在新增 Nginx 主機時，發現網址名稱有過長的問題
+
+
+```
+$ systemctl status nginx.service
+
+● nginx.service - A high performance web server and a reverse proxy server
+   Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: failed (Result: exit-code) since Thu 2019-03-07 08:28:21 UTC; 7s ago
+  Process: 9595 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+  Process: 9827 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+ Main PID: 31527 (code=exited, status=0/SUCCESS)
+
+Mar 07 08:28:21 tnl-dev systemd[1]: Starting A high performance web server and a reverse proxy server...
+Mar 07 08:28:21 tnl-dev nginx[9827]: nginx: [emerg] could not build server_names_hash, you should increase server_names_hash_bucket_size: 64
+Mar 07 08:28:21 tnl-dev nginx[9827]: nginx: configuration file /etc/nginx/nginx.conf test failed
+Mar 07 08:28:21 tnl-dev systemd[1]: nginx.service: Control process exited, code=exited status=1
+Mar 07 08:28:21 tnl-dev systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+Mar 07 08:28:21 tnl-dev systemd[1]: nginx.service: Unit entered failed state.
+Mar 07 08:28:21 tnl-dev systemd[1]: nginx.service: Failed with result 'exit-code'.
+```
+
+此時可以到 `/etc/nginx/nginx.conf` 將 `server_names_hash_max_size` 設定更高的數值
+
+```
+server_names_hash_max_size 512;
+server_names_hash_max_size 1024;
+```
+
+設定完後重新啟動 Nginx 就可以正常啟動了
+
 ## 參考資料
 * [解決 Nginx 錯誤: 413 Request entity too large](https://www.phpini.com/linux/fix-nginx-error-413-request-entity-too-large)
+* [nginx配置server_names_hash_max_size放在什么地方？ - SegmentFault 思否](https://segmentfault.com/q/1010000004853184)
