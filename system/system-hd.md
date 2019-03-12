@@ -1,6 +1,12 @@
 # 硬碟空間
 
-## 查詢資料夾硬碟空間
+## 查詢硬碟使用狀況
+
+```
+df -h
+```
+
+## 查詢資料夾所佔硬碟空間
 
 ```
 sudo du -hs {查詢目錄}
@@ -29,3 +35,9 @@ sudo du -hs /home/web/laravel/*
 64M     /home/web/laravel/vendor
 4.0K	/home/web/laravel/webpack.mix.js
 ```
+
+
+## 參考資料
+* [Day 15 ubuntu 查詢硬碟使用量df指令 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10160087)
+* [Day 16 ubuntu 查詢檔案或目錄的磁碟使用空間du指令 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10160234)
+* [Linux 檢查硬碟使用量 df 指令教學與指令稿範例 - G. T. Wang](https://blog.gtwang.org/linux/linux-df-command-check-disk-space-usage-tutorial-script-example/)
