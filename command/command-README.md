@@ -16,6 +16,14 @@
 renice -20 `cat /home/yoursrcdspath/srcds.pid` >/dev/null 2>&1
 ```
 
+## global bash profile
+
+在 `/etc/profile` 設定的指令，所有使用者都可以使用
+
+```
+sudo vim /etc/profile
+```
+
 ## 參考資料
 * [Linux Shell 1>/dev/null 2>&1 含义 - CSDN博客](https://blog.csdn.net/ithomer/article/details/9288353)
 * [孤島日誌: Unix 重新導向跟 2>&1](http://ibookmen.blogspot.com/2010/11/unix-2.html)
