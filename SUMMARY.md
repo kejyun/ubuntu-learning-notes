@@ -26,6 +26,7 @@
         * [Virtual Host](web/nginx/web-nginx-virtualhost.md)
         * [安全](web/nginx/web-nginx-security.md)
         * [除錯](web/nginx/web-nginx-debug.md)
+        * [除錯](web/nginx/web-nginx-multiple-root.md)
     * [MySQL](web/mysql/web-mysql-README.md)
     * [PHP](web/php/web-php-README.md)
         * [安裝 PHP 7.1](web/php/web-php-php-7.1-install.md)

@@ -1,5 +1,21 @@
 # Nginx 除錯
 
+## 回傳參數
+
+```
+location ~ \.php$ {
+    return 200 $args; add_header Content-Type text/plain;
+    return 200 $uri; add_header Content-Type text/plain;
+    return 200 $document_root; add_header Content-Type text/plain;
+    return 200 $request_uri; add_header Content-Type text/plain;
+}
+```
+
+* $args：get 參數（e.g. ?page=2）
+* $uri：網址路徑（e.g. /tag/laravel）
+* $document_root：網頁路徑（e.g. /var/web/laravel/public）
+* $request_uri：完整請求 URI（/tag/laravel?page=2）
+
 ## 測試 `site-enabled` 設定
 
 ```
