@@ -34,6 +34,13 @@ sudo update-rc.d apache2 disable
 sudo update-rc.d apache2 enable
 ```
 
+## 移除 Apache
+
+```
+sudo apt-get purge -y apache2*
+```
+
 ## 參考資料
 * [How to disable apache2 server from auto starting on boot - Ask Ubuntu](https://askubuntu.com/questions/170640/how-to-disable-apache2-server-from-auto-starting-on-boot)
 * [Microsoft Word - Installing_and_working_with_ Apache_web server](https://www.ce.teiep.gr/e-class/modules/document/file.php/129/Linux_networking/Installing_and_working_with__Apache_web_server.pdf)
+* [uninstall - How Can I stop Apache2 on Ubuntu 18.04? - Ask Ubuntu](https://askubuntu.com/questions/1074035/how-can-i-stop-apache2-on-ubuntu-18-04)
