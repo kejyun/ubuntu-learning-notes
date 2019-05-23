@@ -39,6 +39,53 @@ Zend Engine v3.1.0, Copyright (c) 1998-2017 Zend Technologies
     with Zend OPcache v7.1.8-2+ubuntu16.04.1+deb.sury.org+4, Copyright (c) 1999-2017, by Zend Technologies
 ```
 
+## 在 ubuntu 安裝並執行不同 php 版本
+
+## 安裝其他 php 版本
+
+```
+------------ Install PHP Modules ------------
+$ sudo apt install php5.6-cli php5.6-xml php5.6-mysql
+$ sudo apt install php7.0-cli php7.0-xml php7.0-mysql
+$ sudo apt install php7.1-cli php7.1-xml php7.1-mysql
+$ sudo apt install php7.2-cli php7.2-xml php7.2-mysql
+$ sudo apt install php7.3-cli php7.3-xml php7.3-mysql  
+```
+
+## 執行指定 php 版本
+
+```
+/usr/bin/php -v
+/usr/bin/php7.0 -v
+/usr/bin/php7.1 -v
+```
+
+### 變更預設 php 執行路徑
+
+```
+------------ For PHP 5.6 ------------
+$ sudo update-alternatives --set php /usr/bin/php5.6
+$ php -i | grep "Loaded Configuration File"
+
+------------ For PHP 7.0 ------------
+$ sudo update-alternatives --set php /usr/bin/php7.0
+$ php -i | grep "Loaded Configuration File"
+
+------------ For PHP 7.1 ------------
+$ sudo update-alternatives --set php /usr/bin/php7.1
+$ php -i | grep "Loaded Configuration File"
+
+------------ For PHP 7.2 ------------
+$ sudo update-alternatives --set php /usr/bin/php7.2
+$ php -i | grep "Loaded Configuration File"
+
+------------ For PHP 7.3 ------------
+$ sudo update-alternatives --set php /usr/bin/php7.3
+$ php -i | grep "Loaded Configuration File"
+
+```
+
 ## 參考資料
 * [How to upgrade to PHP 7.1 on Ubuntu | Ayesh Karunaratne](https://ayesh.me/Ubuntu-PHP-7.1)
 * [How to Install and Configure PHP 7.0 or PHP 7.1 on Ubuntu 16.04 - Vultr.com](https://www.vultr.com/docs/how-to-install-and-configure-php-70-or-php-71-on-ubuntu-16-04)
+* [How to Install Different PHP (5.6, 7.0 and 7.1) Versions in Ubuntu](https://www.tecmint.com/install-different-php-versions-in-ubuntu/)
