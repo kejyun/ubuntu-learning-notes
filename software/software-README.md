@@ -43,6 +43,14 @@ W: Some index files failed to download. They have been ignored, or old ones used
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 ```
 
+## 列出所有已安裝套件
+
+```
+sudo apt list --installed
+sudo apt list --installed | less
+```
+
 
 ## 參考資料
 * [GPG error: https://dl.yarnpkg.com/debian stable InRelease NO_PUBKEY E074D16EB6FF4DE3 · Issue #4453 · yarnpkg/yarn · GitHub](https://github.com/yarnpkg/yarn/issues/4453)
+* [How to List Installed Packages on Ubuntu | Linuxize](https://linuxize.com/post/how-to-list-installed-packages-on-ubuntu/)

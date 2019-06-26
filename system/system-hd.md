@@ -37,6 +37,13 @@ sudo du -hs /home/web/laravel/*
 ```
 
 
+## 列出路徑下檔案空間，使用 MB
+
+```
+ls -al --block-size=M
+```
+
+
 ## 參考資料
 * [Day 15 ubuntu 查詢硬碟使用量df指令 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10160087)
 * [Day 16 ubuntu 查詢檔案或目錄的磁碟使用空間du指令 - iT 邦幫忙::一起幫忙解決難題，拯救 IT 人的一天](https://ithelp.ithome.com.tw/articles/10160234)

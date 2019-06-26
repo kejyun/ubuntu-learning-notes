@@ -82,7 +82,13 @@ $ php -i | grep "Loaded Configuration File"
 ------------ For PHP 7.3 ------------
 $ sudo update-alternatives --set php /usr/bin/php7.3
 $ php -i | grep "Loaded Configuration File"
+```
 
+## 安裝 Memcached
+
+```
+sudo apt-get install -y php-memcached
+sudo service php7.0-fpm restart
 ```
 
 ## 參考資料
