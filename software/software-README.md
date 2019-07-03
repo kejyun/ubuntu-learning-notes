@@ -50,6 +50,44 @@ sudo apt list --installed
 sudo apt list --installed | less
 ```
 
+## 強制安裝套件，略過 cli 詢問是否安裝
+
+在安裝套件時，常常會遇到 cli 需要詢問是否繼續安裝，像是：
+
+```
+$ sudo apt-get install php7.2-xml
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+  libzip4 php7.2-bcmath php7.2-cli php7.2-common php7.2-curl php7.2-dev php7.2-fpm php7.2-gd php7.2-gmp php7.2-imap php7.2-intl php7.2-json php7.2-ldap php7.2-mbstring php7.2-mysql php7.2-opcache php7.2-pgsql php7.2-readline php7.2-soap php7.2-sqlite3 php7.2-zip
+Suggested packages:
+  dh-php
+The following packages will be upgraded:
+  libzip4 php7.2-bcmath php7.2-cli php7.2-common php7.2-curl php7.2-dev php7.2-fpm php7.2-gd php7.2-gmp php7.2-imap php7.2-intl php7.2-json php7.2-ldap php7.2-mbstring php7.2-mysql php7.2-opcache php7.2-pgsql php7.2-readline php7.2-soap php7.2-sqlite3 php7.2-xml
+  php7.2-zip
+22 upgraded, 0 newly installed, 0 to remove and 405 not upgraded.
+Need to get 5,739 kB of archives.
+After this operation, 64.5 kB of additional disk space will be used.
+Do you want to continue? [Y/n]
+```
+
+如果要跳過詢問的話，可以在參數加入 `-y`，這樣就可以跳過被詢問的步驟直接安裝
+
+```
+sudo apt-get install -y php7.2-xml
+```
+
+> -y, --yes, --assume-yes
+
+> Automatic yes to prompts; assume "yes" as answer to all prompts and
+  run non-interactively. If an undesirable situation, such as
+  changing a held package, trying to install a unauthenticated
+  package or removing an essential package occurs then apt-get will
+  abort. Configuration Item: APT::Get::Assume-Yes.
+
+
+
 
 ## 參考資料
 * [GPG error: https://dl.yarnpkg.com/debian stable InRelease NO_PUBKEY E074D16EB6FF4DE3 · Issue #4453 · yarnpkg/yarn · GitHub](https://github.com/yarnpkg/yarn/issues/4453)
