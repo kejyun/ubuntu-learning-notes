@@ -165,8 +165,22 @@ rsiU0zzbEUYpS15uuR31QZjeNzGduwOU+gPBuhTdB3IaXyXD7KfSs6vXsaIB
 -----END RSA PRIVATE KEY-----
 ```
 
+
+## 執行遠端 ssh 登入並執行遠端主機指令
+
+在連線主機後若要立即在遠端主機執行指令的話，可以在 `ssh 指令` 後面用單引號（`'`）或雙引號（`"`）將要執行的指令包起來，這樣在 ssh 連線後就會立即在遠端主機執行該指令
+
+
+```shell
+ssh kejyun@127.0.0.1 '<remote_scripts>'
+ssh kejyun@127.0.0.1 "<remote_scripts>"
+ssh kejyun@127.0.0.1 '/home/kejyun/shell.sh'
+ssh kejyun@127.0.0.1 "sudo /home/kejyun/shell.sh argument1 argument2"
+```
+
 ## 參考資料
 * [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 * [ssh - How to check sshd log? - Server Fault](https://serverfault.com/questions/130482/how-to-check-sshd-log)
 * [ssh免密码登陆设置时Authentication refused: bad ownership or modes错误解决方法 - 博学无忧](https://www.bo56.com/ssh%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86%E8%AE%BE%E7%BD%AE%E6%97%B6authentication-refused-bad-ownership-or-modes%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/)
 * [openssl - ssh-keygen does not create RSA private key - Server Fault](https://serverfault.com/questions/939909/ssh-keygen-does-not-create-rsa-private-key)
+* [Run / Execute Command Using SSH - nixCraft](https://www.cyberciti.biz/faq/unix-linux-execute-command-using-ssh/)
