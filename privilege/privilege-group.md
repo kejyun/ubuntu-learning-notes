@@ -43,3 +43,17 @@ www-data:x:33:kejyun,group1,group2
 ```shell
 sudo adduser 帳號名稱 sudo
 ```
+
+
+## 變更檔案群組
+
+除了 `root` 使用者外，沒有人可以將擁有者變更為其他使用者，所以若要變更檔案擁有者的話，必須加上 `sudo` 權限
+
+> Non-privileged users (not root) cannot chown files to other user names. To use chown, a user must have the privileges of the target user. In other words, only root can give a file to another user.
+
+```
+sudo chown -R root:root ./folder
+```
+
+## 參考資料
+* [linux - chown - Operation not permitted - Super User](https://superuser.com/questions/697608/chown-operation-not-permitted)

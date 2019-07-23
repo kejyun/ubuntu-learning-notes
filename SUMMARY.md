@@ -7,6 +7,7 @@
     * [虛擬記憶體（SWAP）](system/system-virtual-memory.md)
     * [語系](system/system-language.md)
     * [硬碟空間](system/system-hd.md)
+    * [開機自動執行](system/system-boot-auto-execute.md)
 * [軟體](software/software-README.md)
     * [輔助](software/software-help.md)
 * [權限](privilege/privilege-README.md)
