@@ -198,6 +198,13 @@ scp -i <your-key> <your_username>@<your-server-domain>:/remote/dir/file.txt /loc
 scp -i ~/.ssh/id_rsa kejyun@127.0.0.1:/home/remote-kejyun/myfile /home/kejyun
 ```
 
+**複製目錄**
+
+複製目錄加一個 `-r` 的參數即可
+
+```
+scp -r -i <your-key> <your_username>@<your-server-domain>:/remote/dir/path /local/dir
+```
 
 ## 參考資料
 * [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
