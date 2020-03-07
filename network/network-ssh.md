@@ -1,5 +1,11 @@
 # SSH
 
+## 建立 ssh key
+
+```
+ssh-keygen -t rsa -b 4096 -C "kj@example.com"
+```
+
 ## 變更 ssh port
 
 開啟設定檔案
@@ -206,6 +212,56 @@ scp -i ~/.ssh/id_rsa kejyun@127.0.0.1:/home/remote-kejyun/myfile /home/kejyun
 scp -r -i <your-key> <your_username>@<your-server-domain>:/remote/dir/path /local/dir
 ```
 
+
+
+## ssh config
+
+*User*
+
+> 登入帳號
+
+
+*PreferredAuthentications*
+
+> 偏好授權方式
+
+ - publickey
+ - password
+
+
+ *PasswordAuthentication*
+
+ > 是否使用密碼驗證，預設 yes
+
+ - yes
+ - no
+
+
+ *PubkeyAuthentication*
+
+ > 是否使用 public key 驗證，預設 yes
+
+ - yes
+ - no
+
+ *IdentitiesOnly*
+
+ > 是否只使用 command line 或 config 的 ssh key，預設 no，所以會去嘗試抓其他不同的 key，像是 `ssh-agent` 的 key
+
+ - yes
+ - no
+
+
+## 測試 ssh 連線
+
+```
+ssh -T git@github.com
+ssh -T git@bitbucket.org
+```
+
+
+
+
 ## 參考資料
 * [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 * [ssh - How to check sshd log? - Server Fault](https://serverfault.com/questions/130482/how-to-check-sshd-log)
@@ -213,3 +269,7 @@ scp -r -i <your-key> <your_username>@<your-server-domain>:/remote/dir/path /loca
 * [openssl - ssh-keygen does not create RSA private key - Server Fault](https://serverfault.com/questions/939909/ssh-keygen-does-not-create-rsa-private-key)
 * [Run / Execute Command Using SSH - nixCraft](https://www.cyberciti.biz/faq/unix-linux-execute-command-using-ssh/)
 * [linux - How to download a file from server using SSH? - Stack Overflow](https://stackoverflow.com/questions/9427553/how-to-download-a-file-from-server-using-ssh)
+* [Use multiple ssh-keys for different GitHub accounts on the same computer](https://medium.com/@xiaolishen/use-multiple-ssh-keys-for-different-github-accounts-on-the-same-computer-7d7103ca8693)
+* [How to manage multiple SSH key pairs | Enable Sysadmin](https://www.redhat.com/sysadmin/manage-multiple-ssh-key-pairs)
+* [OpenSSH Config File Examples - nixCraft](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/)
+* [如何用config管理多個網站的ssh key和如何不用每一組輸入ssh的Pass Phrase @ Alan Tsai 的學習筆記｜An Asp .Net Mvc Web Developer Blog](https://blog.alantsai.net/posts/2016/03/ssh-config-ssh-agent-passphrase-management)
