@@ -106,6 +106,25 @@ chmod +x ./certbot-auto
 ```
 
 
+## 執行 certbot 出現錯誤 `Another instance of Certbot is already running`
+
+在執行 certbot 時出錯錯誤的訊息
+
+> Another instance of Certbot is already running
+
+Certbot 不正常關閉，導致原本的 `.certbot.lock` 檔案還存在於主機中，此時可以透過下方指令找出 `.certbot.lock` 檔案是否還存在
+
+```shell
+find / -type f -name ".certbot.lock"
+```
+
+若檔案存在，則可以用下列指令移除所有 `.certbot.lock` 檔案
+
+```
+find / -type f -name ".certbot.lock" -exec rm {} \;
+```
+
+移除後再次執行 certbot 就可以正常執行了
 
 ## 參考資料
 * [How to install Certbot on Ubuntu 16.04 (Auto Cert Renew!) - Ceos3c](https://www.ceos3c.com/open-source/install-certbot-ubuntu-16-04-auto-cert-renew/)
@@ -116,3 +135,4 @@ chmod +x ./certbot-auto
 * [SSL and nginx missing file: /etc/ssl/certs/dhparam.pem · Issue #10 · ummjackson/mastodon-guide](https://github.com/ummjackson/mastodon-guide/issues/10)
 * [Correct Way to Delete a Certbot SSL Certificate – Matthew Hagemann – Medium](https://medium.com/@mhagemann/correct-way-to-delete-a-certbot-ssl-certificate-e8ee123e6e01)
 * [With 0.32.0, certbot-auto stopped working for some EOL distributions · Issue #6824 · certbot/certbot · GitHub](https://github.com/certbot/certbot/issues/6824#issuecomment-470440436)
+* [Another instance of Certbot is already running - Solved - Linux guru](https://www.vishalvyas.com/2019/02/another-instance-of-certbot-is-already.html)
