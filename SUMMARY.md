@@ -20,6 +20,7 @@
     * [tar](command/command-tar.md)
 * [網路](network/network-README.md)
     * [ssh](network/network-ssh.md)
+    * [查詢 ip](network/network-ip.md)
     * [使用不同 ssh 金鑰登入 github](network/network-multiple-ssh-key-to-same-github-site.md)
 * [網站](web/web-README.md)
     * [Apache](web/apache/web-apache-README.md)
