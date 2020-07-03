@@ -47,6 +47,7 @@
     * [SSL](web/ssl/web-ssl-README.md)
         * [Let's Encrypt](web/ssl/web-ssl-lets-encrypt.md)
         * [NET::ERR_CERT_COMMON_NAME_INVALID](web/ssl/web-ssl-err-cert-common-name.md)
+        * [更新憑證](web/ssl/web-ssl-certificate-verification-failed.md)
 * [監控](monitor/monitor-README.md)
     * [網站](monitor/monitor-websites.md)
 * [日誌](log/log-README.md)
