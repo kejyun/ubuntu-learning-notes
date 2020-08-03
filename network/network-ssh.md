@@ -260,6 +260,14 @@ ssh -T git@bitbucket.org
 ```
 
 
+## Bad owner or permissions on ~/.ssh/config
+
+當使用 ssh config 進行連線時會出現權限的問題，表示 config 設定檔案的權限過於不安全，此時只需要限縮 config 檔案的權限即可
+
+```
+chmod 600 ~/.ssh/config
+```
+
 
 
 ## 參考資料
@@ -273,3 +281,4 @@ ssh -T git@bitbucket.org
 * [How to manage multiple SSH key pairs | Enable Sysadmin](https://www.redhat.com/sysadmin/manage-multiple-ssh-key-pairs)
 * [OpenSSH Config File Examples - nixCraft](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/)
 * [如何用config管理多個網站的ssh key和如何不用每一組輸入ssh的Pass Phrase @ Alan Tsai 的學習筆記｜An Asp .Net Mvc Web Developer Blog](https://blog.alantsai.net/posts/2016/03/ssh-config-ssh-agent-passphrase-management)
+* [Bad owner or permissions on ~/.ssh/config - 简书](https://www.jianshu.com/p/325cd01284e9)
