@@ -260,7 +260,7 @@ ssh -T git@bitbucket.org
 ```
 
 
-## Bad owner or permissions on ~/.ssh/config
+## Bad owner or permissions on `~/.ssh/config`
 
 當使用 ssh config 進行連線時會出現權限的問題，表示 config 設定檔案的權限過於不安全，此時只需要限縮 config 檔案的權限即可
 
@@ -269,6 +269,13 @@ chmod 600 ~/.ssh/config
 ```
 
 
+## 指定特定的 ssh key 去做 git pull
+
+
+```shell
+$ GIT_SSH_COMMAND='ssh -i /Users/kejyun/.ssh/id_rsa_other'
+$ git pull
+```
 
 ## 參考資料
 * [Generating a new SSH key and adding it to the ssh-agent - User Documentation](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
@@ -282,3 +289,4 @@ chmod 600 ~/.ssh/config
 * [OpenSSH Config File Examples - nixCraft](https://www.cyberciti.biz/faq/create-ssh-config-file-on-linux-unix/)
 * [如何用config管理多個網站的ssh key和如何不用每一組輸入ssh的Pass Phrase @ Alan Tsai 的學習筆記｜An Asp .Net Mvc Web Developer Blog](https://blog.alantsai.net/posts/2016/03/ssh-config-ssh-agent-passphrase-management)
 * [Bad owner or permissions on ~/.ssh/config - 简书](https://www.jianshu.com/p/325cd01284e9)
+* [Specify a specific SSH private key for git pull/git clone](https://ma.ttias.be/specify-a-specific-ssh-private-key-for-git-pull-git-clone/)

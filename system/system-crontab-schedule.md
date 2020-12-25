@@ -44,5 +44,23 @@ sudo crontab -e
 */10 * * * * /bin/execute/this/script.sh > /dev/null 2>&1
 ```
 
+## 測試 crontab
+
+直接執行 `crontab` 指令就可以知道 crontab 是否有設定正確
+
+```shell
+crontab path/to/crontab/file
+```
+
+如果有錯誤的狀況發生就會顯示相關的錯誤訊息
+
+```shell
+"/etc/crontab":165: bad day-of-month
+errors in crontab file, can\'t install.
+```
+
+
 # 參考資料
 * [Schedule Tasks on Linux Using Crontab | kvz.io](https://kvz.io/schedule-tasks-on-linux-using-crontab.html)
+* [Crontab.guru - The cron schedule expression editor](https://crontab.guru/#)
+* [cron - Is there a way to validate /etc/crontab’s format? - Server Fault](https://serverfault.com/questions/43733/is-there-a-way-to-validate-etc-crontab-s-format)
